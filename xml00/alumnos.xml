@@ -1,0 +1,11 @@
+<!DOCTYPE alumnos SYSTEM "alumnos.dtd">
+<alumnos>
+    <alumno >
+        <nombre>Eren Jaeger</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Armin Arlert</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+</alumnos>

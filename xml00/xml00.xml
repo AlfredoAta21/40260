@@ -23,7 +23,7 @@
         <apellido>Gómez</apellido>
         <curso>Experiencia de Usuario</curso>
     </alumno>
-    
+        
     <alumno id="A03" edad="19" becado="no">
         <nombre>Carlos</nombre>
         <apellido>Rodríguez</apellido>
