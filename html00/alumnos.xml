@@ -1,0 +1,21 @@
+<alumnos>
+    <alumno correo="correo@example.com" >
+        <nombre>Eren Jaeger</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+
+    <alumno correo="correo@example.com">
+        <nombre>Armin Arlert</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+
+    <alumno correo="correo@example.com" >
+        <nombre>Alis Anto</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+
+    <alumno correo="correo@example.com">  
+        <nombre>Armin Arlert</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+</alumnos>

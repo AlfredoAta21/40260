@@ -3,35 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    x rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+
+    <button onclick="loadXMLDoc()">Ejecutar funcion</button>
     <table id="demo"></table>
 
     <script>
-    function loadXMLDoc() { 
-        const xhttp = new XMLHttpRequest();
-        xhttp.onload = function() {
+        function loadXMLDoc() {
+          const xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
             const xmlDoc = xhttp.responseXML;
-            const cd = xmlDoc.getElementsByTagName("CD");
-            myFunction(cd);
+            const alumnos = xmlDoc.getElementsByTagName("alumno");
+            mostrarAlumnos(alumnos);
+          }
+          xhttp.open("GET", "alumnos.xml");
+          xhttp.send();
         }
-        xhttp.open("GET", "cd_catalog.xml");
-        xhttp.send();
-    }
-
-    function myFunction(cd) {
-    let table="<tr><th>Artist</th><th>Title</th></tr>";
-    for (let i = 0; i < cd.length; i++) {
-        table += "<tr><td>" +
-        cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-        "</td><td>" +
-        cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-        "</td></tr>";
-    }
-    document.getElementById("demo").innerHTML = table;
-    }
-    </script>
+        
+        function mostrarAlumnos(alumnos) {
+          let table = "<tr><th>Nombre</th><th>Correo</th><th>Nacimiento</th></tr>";
+          for (let i = 0; i < alumnos.length; i++) {
+            let nombre = "";
+            let correo = "";
+            let nacimiento = "";
+        
+            const alumno = alumnos[i];
+        
+            const nombreElem = alumno.getElementsByTagName("nombre")[0];
+              nombre = nombreElem.textContent;
+              correo = nombreElem.getAttribute("correo") || alumno.getAttribute("correo") || "No especificado";
+        
+            const nacimientoElem = alumno.getElementsByTagName("nacimiento")[0];
+            if (nacimientoElem) {
+              nacimiento = nacimientoElem.textContent;
+            }
+        
+            table += `<tr>
+                        <td>${nombre}</td>
+                        <td>${correo}</td>
+                        <td>${nacimiento}</td>
+                      </tr>`;
+          }
+        
+          document.getElementById("demo").innerHTML = table;
+        }
+        </script>
 </body>
 </html>
     
