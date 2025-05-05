@@ -19,6 +19,13 @@ form{
     padding: 20px;
 }
 
+legend{
+    color: #0d5e9b;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
 label{
    display: block; 
    margin-bottom: 3px;
