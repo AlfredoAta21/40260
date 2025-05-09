@@ -8,4 +8,13 @@
         <nombre>Armin Arlert</nombre>
         <nacimiento>8835-03-03</nacimiento>
     </alumno>
+       <alumno >
+        <nombre>Eren Jaeger</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Armin Arlert</nombre>
+        <nacimiento>8835-03-03</nacimiento>
+    </alumno>
+    
 </alumnos>
